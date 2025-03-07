@@ -9,6 +9,6 @@ export default function NotFoundScreen() {
      
     </View>
   )
-}
+} 
 
 const styles = StyleSheet.create({})

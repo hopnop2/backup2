@@ -80,15 +80,24 @@ const Login = StyleSheet.create({
         justifyContent: 'center',
         width: 300,
     },
-    stud: {
-        width: 20,
-        height: 20,
-        borderRadius: 10,
-        backgroundColor: '#FFF',
-        margin: 8,
-        borderWidth: 2,
-        borderColor: '#000',
-    }
+    
+    btn: {
+        width: 120, // ปรับขนาดปุ่ม
+        height: 40, // เพิ่มความสูง
+        borderRadius: 10, // โค้งมน
+        backgroundColor: '#007BFF', // สีพื้นน้ำเงิน
+        justifyContent: 'center', // ตำแหน่งข้อความในแนวตั้ง
+        alignItems: 'center', // ตำแหน่งข้อความในแนวนอน
+        margin: 8, // ระยะห่าง
+        borderWidth: 2, // มีกำหนดเส้นขอบรอบปุ่ม
+        borderColor: '#004C99', // สีของขอบปุ่ม
+        color : "white"
+        
+    },
+    
+
+
+
 });
 
 export default Login;

@@ -107,7 +107,7 @@ export default function Index() {
       
       <Button 
         title='Go to User ID' 
-        onPress={() => router.push("/user/123")} // แบบ Dynamic Route
+        onPress={() => router.push("/user/456")} // แบบ Dynamic Route
       />
       
       <Button 
