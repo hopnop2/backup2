@@ -4,8 +4,6 @@ import Login from '@/constants/Login '
 import { useRouter,useLocalSearchParams } from 'expo-router'
 
 
-
-
 export default function contact() {
     const router = useRouter();
     const {name,major,email} = useLocalSearchParams();

@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import TabBarIcon from "@/components/navigation/TabBarIcon ";
-import { FontAwesome } from "@expo/vector-icons";
+
 
 
 export default function TabLayout() {
@@ -38,7 +38,7 @@ export default function TabLayout() {
           ),
         }}
       />
-
+      
 <Tabs.Screen
         name="admin"
         options={{
