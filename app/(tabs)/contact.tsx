@@ -13,17 +13,11 @@ export default function contact() {
       <Text >Name : {name}</Text>
       <Text>Major : {major}</Text>
       <Text>Email : {email}</Text>
-      <Button  title='Click test'  onPress={()=> router.back()} />
-
+      {/* <Button  title='Click test'  onPress={()=> router.back()} /> */}
+    
       <TouchableOpacity style={Login.btn} onPress={() => router.back()}>
       <Text style = {{color : "white"}} > Click test</Text>
       </TouchableOpacity>
-
-   
-
-
-
-
 
     </View>
   )
