@@ -13,7 +13,6 @@ import {
 } from 'react-native'; // คอมโพเนนต์พื้นฐานของ React Native
 import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่นพื้นหลังสีไล่ระดับ
 import Login from '@/constants/Login '; // นำเข้าสไตล์จากไฟล์คอนฟิกรูปลักษณ์
-import About from '@/components/About '; // นำเข้าคอมโพเนนต์ About จากโฟลเดอร์ components
 import { Link, useRouter } from 'expo-router'; // ระบบเนวิเกชันสำหรับ Expo
 import { Alert } from 'react-native';
 import { TouchableHighlight } from 'react-native';
@@ -44,7 +43,7 @@ export default function Index() {
           onPress: () => console.log("Yes Pressed"),
         },
       ],
-      { cancelable: false }
+      { cancelable: true }
     );
   };
   return (

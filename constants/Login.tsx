@@ -28,12 +28,13 @@ const Login = StyleSheet.create({
     title: {
         fontSize: 32,
         fontWeight: "900",
-        color: "#FF0000", // สีแดง Lego
+        color: "#ffff", // สีแดงอ่อนลง สบายตากว่าเดิม
         marginBottom: 10,
-        textShadowColor: "#000",
-        textShadowOffset: { width: 2, height: 2 },
+        textShadowColor: "#000 ",
+        textShadowOffset: { width: 12, height: 12 },
         textShadowRadius: 0,
         letterSpacing: 1.5,
+        
     },
     input: {
         width: 280,
@@ -61,6 +62,7 @@ const Login = StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 0,
+       
     },
     buttonText: {
         color: "#FFF",
@@ -70,6 +72,7 @@ const Login = StyleSheet.create({
         textShadowColor: "#000",
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 0,
+        letterSpacing: 1.5,
     },
     // เพิ่มสไตล์studs (จุดนูนเลโก้)
     studContainer: {
