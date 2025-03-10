@@ -247,6 +247,11 @@ export default function Index() {
         onPress={() => router.push("/switchdemo")} // แบบ Nested Route
       />
 
+<Button 
+        title='Go to flatlist' 
+        onPress={() => router.push("/flatlistdemo")} // แบบ Nested Route
+      />
+
    
     </LinearGradient>
   </ScrollView>
