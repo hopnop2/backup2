@@ -242,6 +242,11 @@ export default function Index() {
         onPress={() => router.push("/textinputdemo")} // แบบ Nested Route
       />
 
+<Button 
+        title='Go to switch' 
+        onPress={() => router.push("/switchdemo")} // แบบ Nested Route
+      />
+
    
     </LinearGradient>
   </ScrollView>

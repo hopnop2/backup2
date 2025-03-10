@@ -17,6 +17,7 @@ export default function Rootlayout() {
         <Stack.Screen name="contact" options={{title: "Contact"}} />
         <Stack.Screen name="+not-found" options={{title: "Not found "}} />
         <Stack.Screen name="textinputdemo" options={{title: "From ", headerShown:true}} />
+        <Stack.Screen name="switchdemo" options={{title: "switch ", headerShown:true}} />
     </Stack>
   )
 }
