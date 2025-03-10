@@ -8,7 +8,6 @@ export default function Rootlayout() {
         headerTitleAlign: "center",
         headerStyle:  {
             backgroundColor: "red",
-
         },
         headerTintColor:"white"
     }}>

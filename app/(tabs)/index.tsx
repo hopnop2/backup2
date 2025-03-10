@@ -8,14 +8,18 @@ import {
   TouchableOpacity, 
   Button ,
   ScrollView,
-  
+  Modal,
+  TouchableHighlight,
+  StatusBarStyle,
   
 } from 'react-native'; // คอมโพเนนต์พื้นฐานของ React Native
 import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่นพื้นหลังสีไล่ระดับ
 import Login from '@/constants/Login '; // นำเข้าสไตล์จากไฟล์คอนฟิกรูปลักษณ์
+import { useState } from 'react';
 import { Link, useRouter } from 'expo-router'; // ระบบเนวิเกชันสำหรับ Expo
 import { Alert } from 'react-native';
-import { TouchableHighlight } from 'react-native';
+
+
 /*import Profile1 from '@/assets/images/profile1.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
 import Profile2 from '@/assets/images/profile2.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
 import Profile3 from '@/assets/images/profile3.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
@@ -24,6 +28,22 @@ import Profile3 from '@/assets/images/profile3.jpg'; // นำเข้ารู
 // คอมโพเนนต์หลักของหน้าแรก
 export default function Index() {
   const router = useRouter(); // ตัวจัดการการเปลี่ยนหน้า
+  //modle
+  const [modalVisible, setModalVisible] = useState(false);
+  
+  //textinput 
+
+
+
+
+
+
+  
+
+
+
+
+  //Alert
   const showAlert = () => {
     Alert.alert(
       "Alert Title",
@@ -46,6 +66,8 @@ export default function Index() {
       { cancelable: true }
     );
   };
+  //Alert
+
   return (
 
   <ScrollView style={{ flex: 1}}>
@@ -82,6 +104,7 @@ export default function Index() {
       <TouchableOpacity style={Login.button} onPress={showAlert}>
         <Text style={Login.buttonText}>Login</Text>
       </TouchableOpacity>
+
 
       {/* ระบบนำทางต่างๆ */}
       <Link href="contact">Click Here</Link> {/* ลิงก์ไปหน้าอื่นแบบพื้นฐาน */}
@@ -129,7 +152,7 @@ export default function Index() {
       />
       <Text> &nbsp; </Text>
 
-     <TouchableHighlight
+      <TouchableHighlight
           underlayColor="white"
           style={{
             backgroundColor: "skyblue",
@@ -143,14 +166,76 @@ export default function Index() {
             showAlert();
           }}
         >
-          <Text>Show Alert</Text>
-        </TouchableHighlight>
+          <Text>ShowAlert</Text>
+    </TouchableHighlight>
 
 
 
-     
-      <StatusBar style="auto" /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
+    <Text> &nbsp; </Text>
 
+<TouchableHighlight
+    underlayColor="white"
+    style={{
+      backgroundColor: "skyblue",
+      paddingVertical: 20,
+      paddingHorizontal: 20,
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: 10,
+    }}
+    onPress={() => {
+      {setModalVisible(true)}
+    }}
+  >
+    <Text>Show model</Text>
+</TouchableHighlight>
+
+
+{/* ปุ่มแสดง Modal */}
+<Text style={ {textAlign: 'center'}}>การใช้ Modal</Text>
+                    <Modal
+                        animationType='slide' // fade, slide, none
+                        transparent={true}
+                        visible={modalVisible}
+                        onShow={() => { console.log('Modal Show') }}
+                        onRequestClose={() => { console.log('Modal Close') }}
+                        >
+                        <View style={{
+                            flex: 1, 
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)', // ทำให้พื้นหลังเป็นกึ่งโปร่งใส
+                            justifyContent: 'center', // จัดกลางในแนวตั้ง
+                            alignItems: 'center', // จัดกลางในแนวนอน
+                        }}>
+                            <View style={{
+                            width: 300, // กำหนดความกว้างของ Modal
+                            backgroundColor: '#fff', // สีพื้นหลังของ Modal
+                            borderRadius: 10, // มุมโค้งมนของ Modal
+                            padding: 20, // ระยะห่างภายใน
+                            alignItems: 'center', // จัดกลางในแนวนอนภายใน Modal
+                            }}>
+                            <Text style={{ marginBottom: 20 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic, consectetur est possimus incidunt eum? Saepe dolores sequi nam amet tempore laboriosam quasi, quam sint unde maiores modi delectus dolor?</Text>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: '100%' }}>
+                                <Button
+                                    title='Submit'
+                                    onPress={() => {
+                                        console.log('Submit Modal')
+                                    }}
+                                />
+                                <Button
+                                    title='X Close'
+                                    onPress={() => {
+                                        setModalVisible(false)
+                                    }}
+                                />
+                            </View>
+                            </View>
+                        </View>
+                    </Modal>
+
+
+
+
+      <StatusBar  translucent = {true} backgroundColor='blue'   /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
 
 
        {/* แสดงคอมโพเนนต์ About */}
