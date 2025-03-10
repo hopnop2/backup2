@@ -235,10 +235,14 @@ export default function Index() {
 
 
 
-      <StatusBar  translucent = {true} backgroundColor='blue'   /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
+      <StatusBar   /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
 
+      <Button 
+        title='Go to From' 
+        onPress={() => router.push("/textinputdemo")} // แบบ Nested Route
+      />
 
-       {/* แสดงคอมโพเนนต์ About */}
+   
     </LinearGradient>
   </ScrollView>
 

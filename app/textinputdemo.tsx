@@ -26,7 +26,7 @@ export default function TextInputDemo() {
           margin: 10,
           borderRadius: 5,
         }}
-        placeholder="Name"
+        placeholder="Jonh doe"
       />
 
       <Text>Email</Text>
@@ -43,7 +43,7 @@ export default function TextInputDemo() {
           margin: 10,
           borderRadius: 5,
         }}
-        placeholder="Email"
+        placeholder="gamertoy3366@gmail.com"
       />
 
       <Text>Tel</Text>
@@ -60,7 +60,7 @@ export default function TextInputDemo() {
           margin: 10,
           borderRadius: 5,
         }}
-        placeholder="Tel"
+        placeholder="08400153119"
       />
 
       <Text></Text>
