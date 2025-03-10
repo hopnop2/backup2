@@ -6,12 +6,15 @@ import { useRouter,useLocalSearchParams } from 'expo-router'
 
 export default function contact() {
     const router = useRouter();
-    const {name,major,tel} = useLocalSearchParams();
+    const {name,password,email,tell,nickname} = useLocalSearchParams();
   return (
     <View style={Login.container}>
-      <Text >Name : {name}</Text>
-      <Text>emil : {major}</Text>
-      <Text>tel : {tel}</Text>
+      <Text >Username : {name}</Text>
+      <Text>password : {password}</Text>
+      <Text>email : {email}</Text>
+      <Text>tell : {tell}</Text>
+      <Text>nickname : {nickname}</Text>
+     
       {/* <Button  title='Click test'  onPress={()=> router.back()} /> */}
     
       <TouchableOpacity style={Login.btn} onPress={() => router.back()}>

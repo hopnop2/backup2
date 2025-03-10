@@ -7,12 +7,17 @@ export default function TextInputDemo() {
   const [inputName, setInputName] = useState("")
   const [inputEmail, setInputEmail] = useState("")
   const [inputTel, setInputTel] = useState("")
+  const [inputPassword, setInputpassword] = useState("")
+  const [inputNickName, setInputNickname] = useState("")
+
+ 
+ 
   const router = useRouter();
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 24 }}>Register</Text>
 
-      <Text>Name</Text>
+      <Text>Username</Text>
       <TextInput
         keyboardType="default"
         defaultValue={inputName}
@@ -29,7 +34,25 @@ export default function TextInputDemo() {
         placeholder="Jonh doe"
       />
 
-      <Text>Email</Text>
+      <Text>Password</Text>
+      <TextInput
+        keyboardType="numeric"
+        defaultValue={inputPassword}
+        onChange={(e) => setInputpassword(e.nativeEvent.text)}
+        style={{
+          height: 40,
+          borderColor: "gray",
+          borderWidth: 1,
+          width: 200,
+          padding: 10,
+          margin: 10,
+          borderRadius: 5,
+        }}
+        placeholder="password"
+      />
+
+
+<Text>Email</Text>
       <TextInput
         keyboardType="email-address"
         defaultValue={inputEmail}
@@ -45,6 +68,7 @@ export default function TextInputDemo() {
         }}
         placeholder="gamertoy3366@gmail.com"
       />
+
 
       <Text>Tel</Text>
       <TextInput
@@ -62,6 +86,29 @@ export default function TextInputDemo() {
         }}
         placeholder="08400153119"
       />
+
+<Text>Nickname</Text>
+      <TextInput
+        keyboardType="default"
+        defaultValue={inputNickName}
+        onChange={(e) => setInputNickname(e.nativeEvent.text)}
+        style={{
+          height: 40,
+          borderColor: "gray",
+          borderWidth: 1,
+          width: 200,
+          padding: 10,
+          margin: 10,
+          borderRadius: 5,
+        }}
+        placeholder="nickname"
+      />
+
+
+
+
+
+
 
       {/*  <Button
         title="Submit"
@@ -81,14 +128,13 @@ export default function TextInputDemo() {
     pathname: "/profile2",
     params: {
       name: `${inputName}`,
-      major: `${inputEmail}`,
-      tel: `${inputTel}`
+      password: `${inputPassword}`,
+      email: `${inputEmail}`,
+      tell: `${inputTel}`,
+      nickname: `${inputNickName}`,
     }
   })} 
 />
-
-
-
 
     </View>
   )
