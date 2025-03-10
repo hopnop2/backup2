@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
-
+import { useRouter } from 'expo-router';
 export default function TextInputDemo() {
 
   // สร้างตัวแปร inputName, inputEmail, inputTel โดยใช้ useState()
   const [inputName, setInputName] = useState("")
   const [inputEmail, setInputEmail] = useState("")
   const [inputTel, setInputTel] = useState("")
-
+  const router = useRouter();
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 24 }}>Simple Form</Text>
+      <Text style={{ fontSize: 24 }}>Register</Text>
 
       <Text>Name</Text>
       <TextInput
@@ -63,16 +63,33 @@ export default function TextInputDemo() {
         placeholder="08400153119"
       />
 
-      <Text></Text>
-      <Button
+      {/*  <Button
         title="Submit"
         onPress={() => {
           console.log("Name:", inputName)
           console.log("Email:", inputEmail)
           console.log("Tel:", inputTel)
         }}
-      />
+     >
+      / */}
       
+
+      
+<Button 
+  title='submit' 
+  onPress={() => router.push({ 
+    pathname: "/profile2",
+    params: {
+      name: `${inputName}`,
+      major: `${inputEmail}`,
+      tel: `${inputTel}`
+    }
+  })} 
+/>
+
+
+
+
     </View>
   )
 }

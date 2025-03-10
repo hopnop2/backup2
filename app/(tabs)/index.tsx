@@ -35,15 +35,6 @@ export default function Index() {
   //textinput 
 
 
-
-
-
-
-  
-
-
-
-
   //Alert
   const showAlert = () => {
     Alert.alert(
@@ -70,7 +61,7 @@ export default function Index() {
   //Alert
 
   return (
-  <SafeAreaView>
+  <SafeAreaView style = {{flex: 1}}>
   <ScrollView style={{ flex: 1}}>
     <LinearGradient 
       colors={['#FF0000', '#FFD700', '#FFFFFF']} // โทนสีแดง-ทอง-ขาวแบบ LEGO
