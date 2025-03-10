@@ -11,6 +11,7 @@ import {
   Modal,
   TouchableHighlight,
   StatusBarStyle,
+  SafeAreaView
   
 } from 'react-native'; // คอมโพเนนต์พื้นฐานของ React Native
 import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่นพื้นหลังสีไล่ระดับ
@@ -69,7 +70,7 @@ export default function Index() {
   //Alert
 
   return (
-
+  <SafeAreaView>
   <ScrollView style={{ flex: 1}}>
     <LinearGradient 
       colors={['#FF0000', '#FFD700', '#FFFFFF']} // โทนสีแดง-ทอง-ขาวแบบ LEGO
@@ -255,7 +256,7 @@ export default function Index() {
    
     </LinearGradient>
   </ScrollView>
-
+  </SafeAreaView>
 
   );
 }
